@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>maclocation User Manual</title>
+	</head>
+
+	<body bgcolor="#ffffff">
+		<h2>maclocation User Manual</h2>
+		<h3>maclocation</h3>
+		<blockquote>
+			
+		
+		maclocation is a simple Mac OS&nbsp;X&nbsp;command-line tool for for selecting a network location from among those currently configured in the Network preferences panel. It is useful if you use your Mac in more than one location (at work and at home, for example).
+
+			<p>You must have administrative privileges to install maclocation.</p>
+			<h4>Installing the maclocation tool</h4>
+			In a Terminal shell:
+			<ul>
+				<li>Create a <tt>/usr/local/bin</tt> directory if it does not exist: <tt>sudo mkdir /usr/local/bin</tt><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;The permissions, owner, and group for <tt>/usr/local/bin</tt> directory should look like this:<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<tt>drwxr-xr-x root wheel</tt>
+				<li>Copy maclocation to <tt>/usr/local/bin</tt>: <tt>sudo cp maclocation /usr/local/bin</tt>
+				<li>Set the SetUID bit on the installed maclocation tool: <tt>sudo chmod u+s /usr/local/bin/maclocation</tt><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;The permissions, owner, and group for <tt>/usr/local/bin/maclocation</tt> should look like this:<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<tt>-rwsr-xr-x root wheel</tt>
+			</ul>
+			<h4>Using the maclocation tool</h4>
+			Run the maclocation tool from a Terminal shell, giving it the name of the network location you want to set. The tool recognizes any of the network location names listed in the Location pop-up menu in the Network preferences panel.
+			<p>Example: <tt>/usr/local/bin/maclocation Home</tt></p>
+		</blockquote>
+		<h3>Location Agent</h3>
+		<blockquote>
+			
+		Location Agent is a Mac application that runs the maclocation tool. A typical use, when the Mac user has separate login names for each location, is to place Location Agent in the Login Items list, so that it automatically sets the network location when the user logins in.
+
+			<h4>Installing Location Agent</h4>
+			<ul>
+				<li>Drop a copy of Location Agent in your Applications folder.
+				<li>(Optional) Add Location Agent to the list of Login Items in the System Preferences panel.
+			</ul>
+			<h4>Using Location Agent</h4>
+			<ul>
+				<li>Run Location&nbsp;Agent and open &quot;Location Agent&quot; &gt; &quot;Preferences&quot;. Choose a location from the &quot;Location&quot; pop-up menu. (Each time you choose a new location from the menu, Location&nbsp;Agent will make that location active.)
+				<li>The next time Location Agent runs, it will activate the network location configured in the Location Agent Preferences. If you do configure a new location, Location Agent will automatically quit after waiting a minute.
+			</ul>
+		</blockquote>
+		<hr>
+		<p><font size="-1">Copyright 2003 Mike Laursen. All rights reserved.</font></p>
+		<p><font size="-1">Redistribution and use with or without modification, are permitted provided that the following conditions are met:</font></p>
+		<p><font size="-1">Redistributions must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</font></p>
+		<p><font size="-1">Important: THIS DOCUMENTATION IS PROVIDED BY THE AUTHORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</font></p>
+	</body>
+
+</html>

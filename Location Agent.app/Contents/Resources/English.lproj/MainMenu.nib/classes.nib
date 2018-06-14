@@ -1,0 +1,14 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {onLocationPreferenceChanged = id; }; 
+            CLASS = LocationAgent; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mLocationPopup = NSPopUpButton; mLogView = LogView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = LogView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }
+    ); 
+    IBVersion = 1; 
+}
